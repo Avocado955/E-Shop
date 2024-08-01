@@ -1,0 +1,37 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.itemCard {
+  @include m.displayFlex(column, flex-start, flex-start, nowrap);
+  max-width: 300px;
+  max-height: 500px;
+  min-width: 100px;
+  min-height: 200px;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  gap: 0.5em;
+}
+
+.itemImage {
+  max-width: 300px;
+  max-height: 400px;
+  width: 300px;
+  height: 400px;
+  border-radius: v.$borderRadius;
+}
+
+.itemDescription {
+  font-family: v.$subText;
+  text-align: left;
+  
+  p {
+    margin: 3px;
+    font-size: large;
+  }
+  
+  &_price {
+    font-size: x-large;
+  }
+}
+
