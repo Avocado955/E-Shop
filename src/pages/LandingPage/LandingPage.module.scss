@@ -1,0 +1,27 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.landingPage {
+  @include m.displayFlex(column, flex-start, flex-start, nowrap);
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.banner {
+  @include m.displayFlex(row, flex-start, center, nowrap);
+  max-width: 100vw;
+  max-height: 200px;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+
+}
+
+.content {
+  @include m.displayFlex(column, flex-start, flex-start, nowrap);
+  max-width: 100vw;
+  width: 100%;
+  height: 80%;
+}
