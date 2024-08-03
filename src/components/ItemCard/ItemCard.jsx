@@ -2,18 +2,18 @@ import styles from "./ItemCard.module.scss";
 // Displays each item for sale in the grid
 
 
-const ItemCard = ({img, itemName}) => {
+const ItemCard = ({product}) => {
   return (
     <div className={styles.itemCard}>
       <div>
-        <img src={img} alt="" className={styles.itemImage}/>
+        <img src={product.imageURL} alt="" className={styles.itemImage}/>
       </div>
       <div className={styles.itemDescription}>
         <p>
-        {itemName}
+        {product.name}
         </p>
         <p className={styles.itemDescription_price}>
-        Item Price
+        ${product.price} AUD
         </p>
       </div>
     </div>

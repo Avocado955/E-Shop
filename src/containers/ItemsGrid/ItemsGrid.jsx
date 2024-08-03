@@ -1,8 +1,14 @@
 // Makes the grid of items and makes each itemCard
 
-const ItemsGrid = () => {
+import ItemCard from "../../components/ItemCard/ItemCard"
+
+const ItemsGrid = ({products}) => {
   return (
-    <div>ItemsGrid</div>
+    <div>
+      {products?.map((product) => (
+        <ItemCard key={product.id} product={product} />
+      ))}
+    </div>
   )
 }
 
