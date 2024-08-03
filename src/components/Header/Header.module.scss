@@ -1,0 +1,14 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.header {
+  @include m.displayFlex(row, flex-start, center, nowrap);
+  max-width: 100vw;
+  max-height: 200px;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  font-family: v.$logo;
+  font-size: 2em;
+  font-weight: 700;
+}
