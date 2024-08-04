@@ -37,3 +37,9 @@
     @content;
   }
 }
+
+@mixin xxl-screen {
+  @media only screen and (min-width: v.$xxl) {
+    @content;
+  }
+}

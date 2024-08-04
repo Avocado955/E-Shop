@@ -19,3 +19,13 @@
     left: 20px;
   }
 }
+
+.links {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    text-decoration: underline;
+    color: white;
+  }
+}

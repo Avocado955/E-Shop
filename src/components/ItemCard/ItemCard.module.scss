@@ -3,6 +3,7 @@
 
 .itemCard {
   @include m.displayFlex(column, flex-start, flex-start, nowrap);
+  position: relative;
   max-width: 300px;
   max-height: 500px;
   min-width: 100px;
@@ -11,6 +12,8 @@
   height: auto;
   padding: 0.5em;
   gap: 0.5em;
+
+  overflow: hidden;
 }
 
 .itemImage {

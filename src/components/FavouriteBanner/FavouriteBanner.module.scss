@@ -1,0 +1,14 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.favouriteBanner {
+
+  color: #FFD700;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  font-size: 2em;
+}

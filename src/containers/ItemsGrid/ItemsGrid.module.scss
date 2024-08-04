@@ -9,7 +9,20 @@
   //For larger screens
   @include m.md-screen{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 5em;
+  }
+
+  @include m.lg-screen {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include m.xl-screen{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  @include m.xxl-screen{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 4em;
   }
 }
