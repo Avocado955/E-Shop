@@ -5,9 +5,11 @@ import styles from "./Header.module.scss";
 const Header = () => {
   return (
     <div className={styles.header} >
-      Threaded
-      <br />
-      Neat
+      <p className={styles.header_text}>
+        Threaded
+        <br />
+        Neat
+      </p>
     </div>
   )
 }

@@ -1,0 +1,15 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.itemsGrid {
+  //For small screens
+  @include m.displayFlex(column, flex-start, flex-start, nowrap);
+  gap: 1.25em;
+  padding: 1em;
+  //For larger screens
+  @include m.md-screen{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 5em;
+  }
+}
