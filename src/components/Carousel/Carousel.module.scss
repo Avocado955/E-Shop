@@ -22,7 +22,7 @@
         height: 400px;
       }
 
-      @include m.lg-screen{
+      @include m.xl-screen{
         width: 300px;
         height: 500px;
       }
@@ -41,7 +41,7 @@
     height: 400px;
   }
 
-  @include m.lg-screen{
+  @include m.xl-screen{
     width: 400px;
     height: 500px;
   }
@@ -65,7 +65,7 @@
     padding: 0.5rem;  
   }
   
-  @include m.lg-screen{
+  @include m.xl-screen{
     padding: 0.75rem;  
   }
 
