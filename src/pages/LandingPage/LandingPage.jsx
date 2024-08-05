@@ -32,7 +32,6 @@ const LandingPage = () => {
         <Carousel />
         {products && <ItemsGrid products={products}/>}
       </div>
-      
     </div>
   )
 }

@@ -3,11 +3,14 @@ import styles from "./Carousel.module.scss";
 
 import { useEffect, useState } from "react"
 import { getAllProductsWithMatchingField } from "../../services/product-services";
+import { useNavigate } from "react-router-dom";
 
 
 const Carousel = () => {
   const [featuredProducts, setFeaturedProducts] = useState(null);
   const [carouselIndex, setCarouselIndex] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getAllProductsWithMatchingField("featured", true).then((data) => setFeaturedProducts(data));
@@ -29,6 +32,10 @@ const Carousel = () => {
     setCarouselIndex(newIndex);
   }
 
+  const goToFeaturedProduct = () => {
+    navigate(`/${featuredProducts[carouselIndex].id}`)
+  }
+
   //Classes
   const nextClass = `${styles.btn} ${styles.next}`;
   const prevClass = `${styles.btn} ${styles.prev}`;
@@ -39,9 +46,13 @@ const Carousel = () => {
       <div className={styles.carousel_window}>
         <img src={featuredProducts[carouselIndex].imageURL} alt="" className={styles.img}/>
         <div className={styles.carousel_window_textSide}>
-          <p>
-            {featuredProducts[carouselIndex].name}
-          </p>
+          <h2>
+            {featuredProducts[carouselIndex].colour + " " + featuredProducts[carouselIndex].name}
+          </h2>
+          <h3>
+            ${featuredProducts[carouselIndex].price} AUD
+          </h3>
+          <button onClick={goToFeaturedProduct}>Product Page</button>
         </div>
       </div>
       }
