@@ -1,0 +1,10 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.footer {
+  @include m.displayFlex(row, center, center, nowrap);
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  background-color: v.$hookersGreen;
+}

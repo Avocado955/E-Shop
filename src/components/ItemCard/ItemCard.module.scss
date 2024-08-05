@@ -10,6 +10,7 @@
       transition: 150ms ease-in-out;
       transform: scale(1.05);
     }
+    text-decoration: underline;
   }
 }
 
@@ -43,11 +44,10 @@
   
   p {
     margin: 3px;
-    font-size: 1.25em;
   }
   
   &_price {
-    font-size: x-large;
+    font-size: 1.25em;
   }
 }
 

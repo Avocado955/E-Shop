@@ -28,10 +28,10 @@ export const getProductById = async (id) => {
   return {id: docSnap.id, ...docSnap.data()};
 }
 
-export const getAllProductsWithName = async (stringToMatch) => {
+export const getAllProductsWithMatchingField = async (fieldName, stringToMatch) => {
   const collectionRef = collection(db, collectionName);
   
-  const dbQuery = query(collectionRef, where("name", "==", stringToMatch));
+  const dbQuery = query(collectionRef, where(fieldName, "==", stringToMatch));
   
   const querySnapshot = await getDocs(dbQuery);
   const cleanedData = querySnapshot.docs.map((doc) => ({

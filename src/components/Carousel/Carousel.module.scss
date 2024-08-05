@@ -1,0 +1,85 @@
+@use "../../partials/mixins.scss" as m;
+@use "../../partials/variables.scss" as v;
+
+.carousel {
+  position: relative;
+
+  &_window {
+    @include m.displayFlex(row, center, center, nowrap);
+    border-radius: v.$borderRadius;
+    overflow: hidden;
+
+    &_textSide {
+      @include m.displayFlex(column, center, center, nowrap);
+      background-color: v.$lavanderWeb;
+      text-align: center;
+      width: 100px;
+      height: 300px;
+
+      @include m.md-screen{
+        // At max screensize
+        width: 200px;
+        height: 400px;
+      }
+
+      @include m.lg-screen{
+        width: 300px;
+        height: 500px;
+      }
+    }
+  }
+
+}
+
+.img {
+  width: 200px;
+  height: 300px;
+
+  @include m.md-screen{
+    // At max screensize
+    width: 300px;
+    height: 400px;
+  }
+
+  @include m.lg-screen{
+    width: 400px;
+    height: 500px;
+  }
+}
+
+.btn {
+  all: unset;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  border-radius: v.$borderRadius;
+  overflow: hidden;
+  font-size: xx-large;
+  font-weight: 900;
+  padding: 0.25rem;
+
+  @include m.md-screen{
+    // at bigger screen sizes
+    padding: 0.5rem;  
+  }
+  
+  @include m.lg-screen{
+    padding: 0.75rem;  
+  }
+
+
+  &:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}

@@ -4,6 +4,8 @@ import styles from "./LandingPage.module.scss";
 import { getAllProducts, subscribeToCollection } from "../../services/product-services";
 import ItemsGrid from "../../containers/ItemsGrid/ItemsGrid";
 import {ProductsContext} from "../../context/ProductsContextProvider";
+import Carousel from "../../components/Carousel/Carousel";
+import Footer from "../../components/Footer/Footer";
 
 // Home page with title, carousel and items grid
 
@@ -27,8 +29,10 @@ const LandingPage = () => {
     <div className={styles.landingPage}>
       <Header />
       <div className={styles.content}>
+        <Carousel />
         {products && <ItemsGrid products={products}/>}
       </div>
+      
     </div>
   )
 }
