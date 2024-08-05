@@ -1,6 +1,18 @@
 @use "../../partials/mixins.scss" as m;
 @use "../../partials/variables.scss" as v;
 
+.link{
+  text-decoration: none;
+  color: v.$gunmetal;
+  &:hover {
+    color: v.$linkHovered;
+    .itemImage {
+      transition: 150ms ease-in-out;
+      transform: scale(1.05);
+    }
+  }
+}
+
 .itemCard {
   @include m.displayFlex(column, flex-start, flex-start, nowrap);
   position: relative;
@@ -11,7 +23,7 @@
   width: auto;
   height: auto;
   padding: 0.5em;
-  gap: 0.5em;
+  gap: 0.75em;
 
   overflow: hidden;
 }
@@ -22,6 +34,7 @@
   width: 300px;
   height: 400px;
   border-radius: v.$borderRadius;
+  transition: 150ms ease-in-out;
 }
 
 .itemDescription {
@@ -30,7 +43,7 @@
   
   p {
     margin: 3px;
-    font-size: large;
+    font-size: 1.25em;
   }
   
   &_price {

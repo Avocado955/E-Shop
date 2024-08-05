@@ -7,7 +7,7 @@ const ItemCard = ({product}) => {
   const navigate = useNavigate();
 
   return (
-    <Link to={`/${product.id}`}>
+    <Link to={`/${product.id}`} className={styles.link}>
     <div className={styles.itemCard}>
       <div>
         <img src={product.imageURL} alt="" className={styles.itemImage}/>
