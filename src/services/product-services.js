@@ -1,8 +1,16 @@
-import { collection, doc, getDoc, getDocs, onSnapshot, query, where } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  onSnapshot,
+  query,
+  updateDoc,
+  where,
+} from "firebase/firestore";
 import { db } from "../config/firestore";
 
 const collectionName = "ecommerce";
-
 
 export const getAllProducts = async () => {
   const collectionRef = collection(db, collectionName); // reference to the collection inside database
@@ -21,27 +29,36 @@ export const getProductById = async (id) => {
 
   const docSnap = await getDoc(docRef);
 
-  if(!docSnap.exists()) {
+  if (!docSnap.exists()) {
     throw new Error("Could not find the product with id " + id);
   }
 
-  return {id: docSnap.id, ...docSnap.data()};
-}
+  return { id: docSnap.id, ...docSnap.data() };
+};
 
-export const getAllProductsWithMatchingField = async (fieldName, stringToMatch) => {
+export const getAllProductsWithMatchingField = async (
+  fieldName,
+  stringToMatch
+) => {
   const collectionRef = collection(db, collectionName);
-  
+
   const dbQuery = query(collectionRef, where(fieldName, "==", stringToMatch));
-  
+
   const querySnapshot = await getDocs(dbQuery);
   const cleanedData = querySnapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
   }));
-  
+
   console.log(cleanedData);
   return cleanedData;
-}
+};
+
+export const updateFavouritedField = async (fieldName, value, id) => {
+  const itemRef = doc(db, collectionName, id);
+
+  await updateDoc(itemRef, { [fieldName]: value });
+};
 
 export const subscribeToCollection = (callback) => {
   const collectionRef = collection(db, collectionName);
@@ -59,4 +76,4 @@ export const subscribeToCollection = (callback) => {
   });
 
   return unsub;
-}
+};

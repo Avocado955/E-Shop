@@ -18,38 +18,37 @@
       width: 100px;
       height: 300px;
 
-      @include m.md-screen{
+      @include m.md-screen {
         // At max screensize
         width: 200px;
         height: 400px;
       }
 
-      @include m.xl-screen{
+      @include m.xl-screen {
         width: 300px;
         height: 500px;
       }
     }
   }
-
 }
 
 .img {
   width: 200px;
   height: 300px;
 
-  @include m.md-screen{
+  @include m.md-screen {
     // At max screensize
     width: 300px;
     height: 400px;
   }
 
-  @include m.xl-screen{
+  @include m.xl-screen {
     width: 400px;
     height: 500px;
   }
 }
 
-.btn {
+.slideBtn {
   all: unset;
   display: block;
   position: absolute;
@@ -62,20 +61,18 @@
   font-weight: 900;
   padding: 0.25rem;
 
-  @include m.md-screen{
+  @include m.md-screen {
     // at bigger screen sizes
-    padding: 0.5rem;  
-  }
-  
-  @include m.xl-screen{
-    padding: 0.75rem;  
+    padding: 0.5rem;
   }
 
+  @include m.xl-screen {
+    padding: 0.75rem;
+  }
 
   &:hover {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
   }
-
 }
 
 .next {
@@ -84,4 +81,23 @@
 
 .prev {
   left: 0;
+}
+
+.btn {
+  background-color: v.$hookersGreen;
+  color: v.$gunmetal;
+  width: 100px;
+  height: 50px;
+  border: 2px white solid;
+  border-radius: v.$borderRadius;
+  transition: 150ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    color: v.$linkHovered;
+    background-color: v.$frenchGray;
+    border-color: v.$gunmetal;
+    transform: scale(1.05);
+    transition: 150ms ease-in-out;
+  }
 }
