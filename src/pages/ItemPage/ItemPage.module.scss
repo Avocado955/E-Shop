@@ -24,6 +24,7 @@
   &_textSide {
     @include m.displayFlex(column, center, center, nowrap);
     background-color: v.$frenchGray;
+    font-family: v.$subText;
     color: v.$gunmetal;
     text-align: center;
     width: 300px;
@@ -44,6 +45,7 @@
       font-size: 4em;
       color: black;
       margin: 2rem 0;
+      font-family: v.$headings;
     }
   }
 }

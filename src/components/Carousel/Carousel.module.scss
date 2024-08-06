@@ -12,6 +12,7 @@
 
     &_textSide {
       @include m.displayFlex(column, center, center, nowrap);
+      font-family: v.$subText;
       background-color: v.$lavanderWeb;
       color: v.$gunmetal;
       text-align: center;

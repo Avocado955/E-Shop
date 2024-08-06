@@ -5,4 +5,5 @@
   @include m.displayFlex(row, center, center, nowrap);
   width: 100%;
   background-color: v.$hookersGreen;
+  font-family: v.$subText;
 }
