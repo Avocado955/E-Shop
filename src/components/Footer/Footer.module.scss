@@ -3,8 +3,6 @@
 
 .footer {
   @include m.displayFlex(row, center, center, nowrap);
-  position: static;
-  bottom: 0;
-  height: 100px;
+  width: 100%;
   background-color: v.$hookersGreen;
 }

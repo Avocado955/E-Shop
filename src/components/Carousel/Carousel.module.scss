@@ -3,6 +3,7 @@
 
 .carousel {
   position: relative;
+  margin-top: 5em;
 
   &_window {
     @include m.displayFlex(row, center, center, nowrap);
@@ -12,6 +13,7 @@
     &_textSide {
       @include m.displayFlex(column, center, center, nowrap);
       background-color: v.$lavanderWeb;
+      color: v.$gunmetal;
       text-align: center;
       width: 100px;
       height: 300px;
