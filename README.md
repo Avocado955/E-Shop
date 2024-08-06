@@ -7,9 +7,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-
-
 ## MVP
+
 At a minimum your e-shop website should have two pages:
 
 - Home Page
@@ -27,3 +26,14 @@ At a minimum your e-shop website should have two pages:
     - image url
       All data should be stored in Firestore and fetched by the frontend, there should be NO static product data in the react application0
     - favourited or not (boolean)
+
+## Planned Updates
+
+- Favourite button updating the favourited status of the product
+- Cart system
+
+## Possible Future Features
+
+- Different images when hovering on the item cards
+- fake payment using Stripe
+- See if the carousel can swipe across to the next item instead of just jump to it
