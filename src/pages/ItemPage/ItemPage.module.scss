@@ -42,10 +42,19 @@
     }
 
     &_name {
-      font-size: 4em;
+      font-size: 2em;
       color: black;
-      margin: 2rem 0;
+      margin: 1rem 0;
       font-family: v.$headings;
+
+      @include m.md-screen {
+        font-size: 3em;
+        margin: 2rem 0;
+      }
+
+      @include m.xl-screen {
+        font-size: 3.5em;
+      }
     }
   }
 }
